@@ -1,0 +1,7 @@
+{{#each model as |post|}}
+  {{#blog-post title=post.title}}
+    {{post.body}}
+  {{/blog-post}}
+  {{comments-list comments=post.comments}}
+  {{new-comment-box post-id=post.id onSubmit=(action 'submitComment')}}
+{{/each}}
