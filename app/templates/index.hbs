@@ -1,5 +1,5 @@
 {{#each model as |post|}}
-  {{#blog-post title=post.title}}
+  {{#blog-post created=post.created title=post.title}}
     {{post.body}}
   {{/blog-post}}
   {{comments-list comments=post.comments}}
