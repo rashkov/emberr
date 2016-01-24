@@ -1,7 +1,7 @@
 export default Ember.Controller.extend({
   actions: {
-    submitComment(userName, commentBody) {
-      let post = this.store.peekRecord('post', 1);
+    submitComment(postId, userName, commentBody) {
+      let post = this.store.peekRecord('post', postId);
       let comment = this.store.createRecord('comment', {
         post: post,
         name: userName,

@@ -4,7 +4,7 @@ import $ from 'jquery';
 export default Ember.Component.extend({
   actions: {
     submit(){
-      this.get('onSubmit')(this.name, this.comment);
+      this.get('onSubmit')(this.postid, this.name, this.comment);
     }
   }
 });
