@@ -27,6 +27,11 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         {{log-out-button tagName="li"}}
+        {{#if isNotAuthenticated }}
+          <li>
+            {{link-to "Sign Up" "sign-up"}}
+          </li>
+        {{/if}}
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
