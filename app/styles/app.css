@@ -1,3 +1,21 @@
 .navbar-nav>li>a {
     cursor: pointer;
 }
+.comment-box-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 7pt;
+    cursor: pointer;
+}
+.comment-box-well {
+    position: relative;
+}
+.blog-post{
+    border: 1px solid #e7e7e7;
+    padding: 10px;
+    margin: 10px;
+}
+.blog-entry{
+    border: 1px solid #e7e7e7;
+}

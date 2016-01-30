@@ -1,4 +1,5 @@
 export default Ember.Controller.extend({
+  session: Ember.inject.service('session'),
   actions: {
     submitComment(postId, userName, commentBody) {
       let post = this.store.peekRecord('post', postId);

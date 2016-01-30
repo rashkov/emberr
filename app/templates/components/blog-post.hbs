@@ -1,5 +1,11 @@
 <article class="blog-post">
-  <h5>{{created}}</h5>
-  <h2>{{title}}</h2>
+  <div class="pull-left">
+    {{post.username}}
+  </div>
+  <div class="pull-right">
+    {{post.created}}
+  </div>
+  <div class="clearfix"></div>
+  <h2>{{post.title}}</h2>
   <h4>{{yield}}</h4>
 </article>
