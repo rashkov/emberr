@@ -1,5 +1,15 @@
 <h2>Sign up</h2>
 
+{{#if errors}}
+  <div class="well alert-warning">
+    {{#each-in errors as |key value|}}
+      <div>
+        {{key}}: {{value}}
+      </div>
+    {{/each-in}}
+  </div>
+{{/if}}
+
 <form {{action 'submit'}}>
   <div>
     <label for="user_name">Username</label>
@@ -20,7 +30,7 @@
     {{input autocomplete="off" type="password" value=password_confirmation id="user_password_confirmation"}}
   </div>
 
-  <div>
-    <input type="submit" value="Sign up" />
+  <div class="sign-up-div">
+    <button type="submit" class="btn btn-default" value="Sign up">Sign Up</button>
   </div>
 </form>

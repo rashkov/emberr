@@ -7,10 +7,10 @@ export default Ember.Component.extend({
       let { identification, password } = this.getProperties('identification', 'password');
       this.get('session').authenticate('authenticator:oauth2', identification, password).then(
         function() {
-          console.log('uh ok');
+          // ember-simple-auth takes care of routing to the index route on success
         },
-        (reason) => {
-          this.set('errorMessage', reason.error);
+        () => {
+          this.set('errorMessage', true);
         }
       );
     }

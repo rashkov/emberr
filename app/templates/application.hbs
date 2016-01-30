@@ -28,9 +28,11 @@
       <ul class="nav navbar-nav navbar-right">
         {{log-out-button tagName="li"}}
         {{#if isNotAuthenticated }}
-          <li>
-            <a href="http://localhost:3000/users/sign_up">Sign Up</a>
-          </li>
+          {{#link-to "sign-up" tagName="li" href=false}}
+            <a {{bind-attr href="view.href"}}>
+              Sign Up
+            </a>
+          {{/link-to}}
         {{/if}}
       </ul>
     </div><!-- /.navbar-collapse -->
