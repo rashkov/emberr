@@ -16,6 +16,8 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+      oauth_url: 'http://localhost:3000/oauth/token',
+      oauth_base_url: 'http://localhost:3000'
     },
 
     contentSecurityPolicy: {
