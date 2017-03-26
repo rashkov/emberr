@@ -1,9 +1,20 @@
 <div class="blog-entry">
   {{#each sortedPosts as |post|}}
-    {{#blog-post post=post}}
+    {{#blog-post
+       post=post
+       showCommentBox=(action 'showCommentBox')
+       commentBoxVisible=commentBoxVisible
+       isAuthenticated=session.isAuthenticated
+    }}
       {{post.body}}
     {{/blog-post}}
     {{comments-list comments=post.comments}}
-    {{new-comment-box postid=post.id onSubmit=(action 'submitComment') isAuthenticated=session.isAuthenticated}}
+    {{new-comment-box
+      hideCommentBox=(action 'hideCommentBox')
+      commentBoxVisible=commentBoxVisible
+      postid=post.id
+      onSubmit=(action 'submitComment')
+      isAuthenticated=session.isAuthenticated
+    }}
   {{/each}}
 </div>

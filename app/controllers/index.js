@@ -16,6 +16,12 @@ export default Ember.Controller.extend({
       });
       post.get('comments').pushObject(comment);
       comment.save();
+    },
+    showCommentBox() {
+      this.set('commentBoxVisible', true);
+    },
+    hideCommentBox() {
+      this.set('commentBoxVisible', false);
     }
   }
 });

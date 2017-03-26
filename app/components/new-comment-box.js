@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   commentClose: function(){
-    this.set('showCommentBox', false);
+    this.get('hideCommentBox')();
     this.set('comment', '');
   },
   actions: {
@@ -11,7 +11,7 @@ export default Ember.Component.extend({
       this.commentClose();
     },
     replyClicked(){
-      this.set('showCommentBox', true);
+      this.get('hideCommentBox')();
     },
     commentClose(){
       this.commentClose();

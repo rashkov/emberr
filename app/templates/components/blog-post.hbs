@@ -8,4 +8,12 @@
   <div class="clearfix"></div>
   <h2>{{post.title}}</h2>
   <h4>{{yield}}</h4>
+  {{#unless commentBoxVisible}}
+    {{#if isAuthenticated }}
+      <button class="btn btn-default" {{action 'replyClicked'}}>Reply</button>
+    {{else}}
+      {{link-to 'Log in to Reply' 'login' tagName='button' class='btn btn-default'}}
+    {{/if}}
+  {{/unless}}
 </article>
+
