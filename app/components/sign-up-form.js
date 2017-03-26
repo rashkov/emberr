@@ -1,5 +1,4 @@
 import Ember from 'ember';
-import ENV from 'emberr/config/environment';
 
 export default Ember.Component.extend({
   signup: Ember.inject.service(),

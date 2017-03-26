@@ -15,12 +15,12 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         {{#link-to "index" tagName="li" href=false}}
-          <a {{bind-attr href="view.href"}}>
+          <a>
             All Posts
           </a>
         {{/link-to}}
         {{#link-to "new-post" tagName="li" href=false}}
-          <a {{bind-attr href="view.href"}}>
+          <a>
             New Post
           </a>
         {{/link-to}}
@@ -29,7 +29,7 @@
         {{log-out-button tagName="li"}}
         {{#if isNotAuthenticated }}
           {{#link-to "sign-up" tagName="li" href=false}}
-            <a {{bind-attr href="view.href"}}>
+            <a>
               Sign Up
             </a>
           {{/link-to}}
