@@ -1,5 +1,5 @@
 <div class="blog-entry">
-  {{#each model as |post|}}
+  {{#each sortedPosts as |post|}}
     {{#blog-post post=post}}
       {{post.body}}
     {{/blog-post}}

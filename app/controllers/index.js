@@ -2,6 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   session: Ember.inject.service('session'),
+
+  postsSorting: ['created:desc'],
+  sortedPosts: Ember.computed.sort('model', 'postsSorting'),
+
   actions: {
     submitComment(postId, userName, commentBody) {
       let post = this.store.peekRecord('post', postId);
